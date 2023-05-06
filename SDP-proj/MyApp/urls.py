@@ -10,9 +10,9 @@ urlpatterns = [
     path("register", views.register, name="register"),
     path("signin", views.signin, name="signin"),
     path("signout",views.signout,name = "signout"),
-   # path("bill",views.order,name = "bill"),
-   # path("contact",views.contact,name = 'contact'),
-    # path("vehicles",views.Order,name = 'vehicles'),
+    path("bill",views.order,name = "bill"),
+   path("contact",views.contact,name = 'contact'),
+     path("vehicles",views.Order,name = 'vehicles'),
     # path("bike",views.bike,name = 'bike'),
     # path("bus",views.bus,name = 'bus'),
     
