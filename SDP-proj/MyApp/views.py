@@ -101,9 +101,25 @@ def order(request):
         fl = request.POST.get('fl', '')
         tl = request.POST.get('tl', '')
         # print(request.POST['cars11'])
+        if 'aadhar' in request.FILES:
+            aadhar_card = request.FILES['aadhar']
+        else:
+            aadhar_card = None
+
+            # Check if the Driving License field exists in the request
+        if 'driving_license' in request.FILES:
+            driving_license = request.FILES['driving_license']
+        else:
+            driving_license = None
+
+            # Check if the Passport Size Photo field exists in the request
+        if 'passport_photo' in request.FILES:
+            passport_photo = request.FILES['passport_photo']
+        else:
+            passport_photo = None
 
         order = Order(name=billname, email=billemail, phone=billphone, address=billaddress, city=billcity, cars=cars11,
-                      days_for_rent=dayss, date=date, loc_from=fl, loc_to=tl)
+                      days_for_rent=dayss, date=date, loc_from=fl, loc_to=tl,aadhar_card=aadhar_card, driving_license=driving_license, passport_photo=passport_photo)
         order.save()
         return redirect('home')
     else:

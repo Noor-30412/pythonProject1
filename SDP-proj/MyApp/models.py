@@ -25,6 +25,9 @@ class Order(models.Model):
     date = models.CharField(max_length=50, default="")
     loc_from = models.CharField(max_length=50, default="")
     loc_to = models.CharField(max_length=50, default="")
+    aadhar_card = models.FileField(upload_to='documents/', blank=True, null=True)
+    driving_license = models.FileField(upload_to='documents/', blank=True, null=True)
+    passport_photo = models.FileField(upload_to='documents/', blank=True, null=True)
 
     def __str__(self):
         return self.name

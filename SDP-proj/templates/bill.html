@@ -52,7 +52,23 @@
           <input type="text" class="form-control" id="inputZip">
         </div>
       {% comment %} <p>Price : {{cars.price}}</p> {% endcomment %}
-      </div>  
+      </div>
+    <h2 style="text-align : center" class="head my-4">Upload Documents</h2>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="aadhar">Aadhar Card</label>
+        <input type="file" class="form-control-file" id="aadhar" name="aadhar" accept="image/*" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="license">Driving License</label>
+        <input type="file" class="form-control-file" id="license" name="license" accept="image/*" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="photo">Passport Size Photo</label>
+      <input type="file" class="form-control-file" id="photo" name="photo" accept="image/*" required>
+    </div>
+
       <h2 style="text-align : center" class="head my-4">Car Details</h2>
       <div class="form-row ">
         <div class="form-group col-md-6">
